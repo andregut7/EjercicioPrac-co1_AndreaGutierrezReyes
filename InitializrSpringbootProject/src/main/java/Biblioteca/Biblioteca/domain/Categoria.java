@@ -13,7 +13,7 @@ public class Categoria implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long idCategoria;
+    private Long id;
     
     @Column(name = "nombre", nullable = false, unique = true, length = 100)
     private String nombreCategoria;
@@ -46,14 +46,13 @@ public class Categoria implements Serializable {
         this.descripcionCategoria = descripcionCategoria;
     }
 
-    public Long getIdCategoria() {
-        return idCategoria;
-    }
+public Long getId() {
+    return id;
+}
 
-    public void setIdCategoria(Long idCategoria) {
-        this.idCategoria = idCategoria;
-    }
-
+public void setId(Long id) {
+    this.id = id;
+}
     public String getNombreCategoria() {
         return nombreCategoria;
     }
